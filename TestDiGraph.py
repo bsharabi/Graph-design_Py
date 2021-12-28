@@ -8,7 +8,6 @@ class TestDiGraph(unittest.TestCase):
         self.graph = DiGraph()
         for id in range(4):
             self.graph.add_node(id)
-        print(self.graph)
 
     def test_v_size(self):
         print("\nTest v_size")

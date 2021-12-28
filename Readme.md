@@ -9,10 +9,29 @@ Graph design gives Graph theory students a new way to study and understand inter
 
 
 ## Technologies
+>A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property. ... Modern versions of unit testing can be found in frameworks like JUnit, or testing tools like TestComplete.
 
+* TestDiGraph
+ >In testing this unit we would like to check if each of the functions in the above class is indeed working as expected
+ 
+ Example:
+ ```py
+def __init__(self, methodName: str = ...) -> None:
+    super().__init__(methodName=methodName)
+    self.graph = DiGraph()
+    for id in range(4):
+        self.graph.add_node(id)
 
+def test_v_size(self):
+    print("\nTest v_size")
+    print("----------------------------")
+    self.assertEqual(self.graph.v_size(), 4)
+    self.graph.add_node(id)
+    self.assertEqual(self.graph.v_size(), 5)
+ ```   
+>In this example we build a graph with 4 codes and perform a test on the function v_size() and expect to get truth that the function has indeed returned the expected value
 
-
+>We will then get another vertex and perform the test again, which means that now the function will return true if the entered vertex increased the number of vertices in the graph
 
 ## How to run:
 ```bash
