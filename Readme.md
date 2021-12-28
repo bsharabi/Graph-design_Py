@@ -93,6 +93,7 @@ Graph design gives Graph theory students a new way to study and understand inter
 
 ### plot_graph:
 > This function produces a graphical interface for displaying the graph, this function uses a library *matplotlib*
+![image](image\plotGraph01.png)
 ***
 ## Graph
 ***
@@ -150,6 +151,7 @@ def test_v_size(self):
 
 >We will then get another vertex and perform the test again, which means that now the function will return true if the entered vertex increased the number of vertices in the graph
 
+# UML:
 
 ## How to run:
 ```bash
