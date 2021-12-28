@@ -23,6 +23,7 @@ class Vertex(object):
     def set_visited(self):
         self.visited = True
 
+
     def __repr__(self):
         return f"{self.id}: |edges out| {self.edgeDictOut.keys()} |edges in| {self.edgeDictIn.keys()}"
 
