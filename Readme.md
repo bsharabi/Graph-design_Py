@@ -1,55 +1,20 @@
-# Graph
+# Graph design
 
-![not found](https://cdn.pixabay.com/photo/2018/02/27/17/40/graph-3186082_1280.png)
 ***
 **Graph design** - is an software tool for directed and undirected graphs. 
 it gives the user the ability to see the graph visually, get information about the graph and analyze it.
 all the information based on many algorithms and calculations simple and complicated together to give the best complexity possible.
 Graph design gives Graph theory students a new way to study and understand interacted graphs faster simpler and get productive.
 
-
-## Technologies
->A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property. ... Modern versions of unit testing can be found in frameworks like JUnit, or testing tools like TestComplete.
-
-* TestDiGraph
- >In testing this unit we would like to check if each of the functions in the above class is indeed working as expected
- 
- Example:
- ```py
-def __init__(self, methodName: str = ...) -> None:
-    super().__init__(methodName=methodName)
-    self.graph = DiGraph()
-    for id in range(4):
-        self.graph.add_node(id)
-
-def test_v_size(self):
-    print("\nTest v_size")
-    print("----------------------------")
-    self.assertEqual(self.graph.v_size(), 4)
-    self.graph.add_node(id)
-    self.assertEqual(self.graph.v_size(), 5)
- ```   
->In this example we build a graph with 4 codes and perform a test on the function v_size() and expect to get truth that the function has indeed returned the expected value
-
->We will then get another vertex and perform the test again, which means that now the function will return true if the entered vertex increased the number of vertices in the graph
-
-## How to run:
-```bash
-# Clone the repository
-$ git clone https://github.com/bsharabi/Graph-design_Py.git
-# Go into the repository
-$ cd Graph-design_Py
-# Open the terminal on Windows
-$ Run "py ./main.py"
-# Open the terminal on Linux
-$ Run "python3 ./main.py"
-```
-***
+![not found](https://cdn.pixabay.com/photo/2018/02/27/17/40/graph-3186082_1280.png)
 
 # Departments
 
 ## Algo:
+***
 >this is the core class of Graph design. it contains multiple algorithms based on well known Graph theory algorithms like Dijkstra DFS and many more, the main method of this class is to disassemble those algorithms to smaller function in way they can use each other's information and sync with each other, what make Graph Design better quicker and simpler. the whole class outputs is based on the same results format so each function can help multiple answers for different user requests. the main algorithms are:
+### get_graph:
+
 
 ### Dijakstra: 
 > Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later. [4] [5] [6]
@@ -72,9 +37,35 @@ $ Run "python3 ./main.py"
 
 >In this function we will use a Dijakstra algorithm that finds all the paths from the resulting vertex.
 
+### load_from_json:
 
+### save_to_json:
+
+### plot_graph:
+
+***
 ## Graph
+***
+### v_size e_size
+### get_all_v
+### all_in_edges_of_node
+### all_out_edges_of_node
+### get_mc
+### add_edge
 
+    
+### add_node
+
+
+### remove_node
+      
+
+### remove_edge
+    
+   
+  
+### getJsonGraph
+*** 
 
 
 ## Nodes
@@ -83,13 +74,45 @@ $ Run "python3 ./main.py"
 
 
 ***
+
 # UnitTesting
+>A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property. ... Modern versions of unit testing can be found in frameworks like JUnit, or testing tools like TestComplete.
 
 * TestDiGraph
+ >In testing this unit we would like to check if each of the functions in the above class is indeed working as expected
+ 
+ Example:
+ ```py
+def __init__(self, methodName: str = ...) -> None:
+    super().__init__(methodName=methodName)
+    self.graph = DiGraph()
+    for id in range(4):
+        self.graph.add_node(id)
+
+def test_v_size(self):
+    print("\nTest v_size")
+    print("----------------------------")
+    self.assertEqual(self.graph.v_size(), 4)
+    self.graph.add_node(6)
+    self.assertEqual(self.graph.v_size(), 5)
+ ```   
+>In this example we build a graph with 4 codes and perform a test on the function v_size() and expect to get truth that the function has indeed returned the expected value
+
+>We will then get another vertex and perform the test again, which means that now the function will return true if the entered vertex increased the number of vertices in the graph
 
 
-* TestGraphAlgo
-
+## How to run:
+```bash
+# Clone the repository
+$ git clone https://github.com/bsharabi/Graph-design_Py.git
+# Go into the repository
+$ cd Graph-design_Py
+# Open the terminal on Windows
+$ Run "py ./main.py"
+# Open the terminal on Linux
+$ Run "python3 ./main.py"
+```
+***
 
 # RunTime Java impl vs Python impl (Windows 11 i9HK, 32GB)
 
