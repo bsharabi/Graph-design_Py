@@ -93,7 +93,7 @@ Graph design gives Graph theory students a new way to study and understand inter
 
 ### plot_graph:
 > This function produces a graphical interface for displaying the graph, this function uses a library *matplotlib*
-![image](image\plotGraph01.png)
+![not found]("image\plotGraph01.png")
 ***
 ## Graph
 ***
