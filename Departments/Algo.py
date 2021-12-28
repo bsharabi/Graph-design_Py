@@ -12,9 +12,17 @@ class GraphAlgo(object):
         self.graph = graph
 
     def get_graph(self) -> GraphInterface:
+        """
+        :return: the directed graph on which the algorithm works on.
+        """
         return self.graph
 
     def load_from_json(self, file_name: str) -> bool:
+        """
+        Loads a graph from a json file.
+        @param file_name: The path to the json file
+        @returns True if the loading was successful, False o.w.
+        """
         file_name = file_name.split(".")
         try:
             graph = open(file_name[0]+".json")
@@ -41,6 +49,11 @@ class GraphAlgo(object):
             return True
 
     def save_to_json(self, file_name: str) -> bool:
+        """
+        Saves the graph in JSON format to a file
+        @param file_name: The path to the out file
+        @return: True if the save was successful, False o.w.
+        """
         file_name = file_name.split(".json")
         try:
             graphWrite = open("".join(file_name)+".json", 'w')
@@ -55,6 +68,14 @@ class GraphAlgo(object):
 
     # O(|V|log|V|)
     def shortest_path(self, id1: int, id2: int) -> tuple:
+        """
+        Returns the shortest path from node id1 to node id2 using Dijkstra's Algorithm
+        @param id1: The start node id
+        @param id2: The end node id
+        @return: The distance of the path, a list of the nodes ids that the path goes through
+        Notes:
+        If there is no path between id1 and id2, or one of them dose not exist the function returns (float('inf'),[])
+        """
         g = self.graph
         if id1 not in g.nodeDict or id2 not in g.nodeDict:
             return (float('inf'), [])
@@ -112,6 +133,11 @@ class GraphAlgo(object):
             heapq.heapify(unvisited_queue)
             
     def TSP(self, node_lst: List[int]) -> tuple:
+        """
+        Finds the shortest path that visits all the nodes in the list
+        :param node_lst: A list of nodes id's
+        :return: A list of the nodes id's in the path, and the overall distance
+        """
         if len(node_lst) ==1:
             return (node_lst,0)
         TSPpath =[]
@@ -162,7 +188,11 @@ class GraphAlgo(object):
             pass
         return maxDis
 
-    def centerPoint(self):
+    def centerPoint(self)->tuple:
+        """
+        Finds the node that has the shortest distance to it's farthest node.
+        :return: The nodes id, min-maximum distance
+        """
         listPath = []
         nodeDict = self.graph.nodeDict
         for vertex in nodeDict.keys():
@@ -175,6 +205,12 @@ class GraphAlgo(object):
         return listPath[0][1], listPath[0][0]
 
     def plot_graph(self) -> None:
+        """
+        Plots the graph.
+        If the nodes have a position, the nodes will be placed there.
+        Otherwise, they will be placed in a random but elegant manner.
+        @return: None
+        """
         nodeDict = self.graph.nodeDict
         for node in nodeDict.values():
             x, y, z = node.pos
