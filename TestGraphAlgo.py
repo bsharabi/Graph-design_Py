@@ -1,4 +1,3 @@
-import json
 import unittest
 import os
 from Departments.Algo import GraphAlgo
@@ -9,20 +8,20 @@ class TestAlgo(unittest.TestCase):
 
     def __init__(self, methodName: str = ...) -> None:
         super().__init__(methodName=methodName)
-        self.graph=DiGraph()
+        self.graph = DiGraph()
         for n in range(4):
-            self.graph.add_node(n)    
+            self.graph.add_node(n)
         self.algo = GraphAlgo()
-        
+
     def test_get_graph(self):
         a = self.algo
         print("\nTest get_graph")
         print("----------------------------")
-        self.assertNotEqual(a.get_graph(),None)
-        self.algo=GraphAlgo(self.graph)
+        self.assertNotEqual(a.get_graph(), None)
+        self.algo = GraphAlgo(self.graph)
         a = self.algo
-        self.assertEqual(a.get_graph(),self.graph)
- 
+        self.assertEqual(a.get_graph(), self.graph)
+
     def test_load_File(self):
         a = self.algo
         print("\nTest load_File")
@@ -245,11 +244,11 @@ class TestAlgo(unittest.TestCase):
         if os.path.exists("data\\test.json"):
             os.remove("data\\test.json")
         self.assertFalse(os.path.exists("data\\test.json"))
-        self.assertTrue(a.save_to_json("test"))
+        self.assertTrue(a.save_to_json("data\\test.json"))
         self.assertTrue(os.path.exists("data\\test.json"))
         self.assertTrue(a.load_from_json("data\\test.json"))
-        g=a.get_graph()
-        self.assertDictEqual(g.getJsonGraph(),{"Edges": [], "Nodes": []})
+        g = a.get_graph()
+        self.assertDictEqual(g.getJsonGraph(), {"Edges": [], "Nodes": []})
 
     def test_shortest_path(self):
         a = self.algo

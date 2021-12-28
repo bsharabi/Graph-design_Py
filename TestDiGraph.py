@@ -1,6 +1,5 @@
 import unittest
 from Departments.Graph import DiGraph
-from Departments.Nodes import Node
 
 class TestDiGraph(unittest.TestCase):
 
@@ -47,11 +46,11 @@ class TestDiGraph(unittest.TestCase):
         nodeDictIn = g.all_in_edges_of_node(1)
         self.assertDictEqual({}, nodeDictIn)
         g.add_edge(0, 1, 8)
-        self.assertDictEqual({g.nodeDict[0]: 8}, nodeDictIn)
+        self.assertDictEqual({0: 8}, nodeDictIn)
         g.add_edge(2, 1, 8)
         g.add_edge(3, 1, 8)
         self.assertDictEqual(
-            {g.nodeDict[0]: 8, g.nodeDict[2]: 8, g.nodeDict[3]: 8}, nodeDictIn)
+            {0: 8, 2: 8, 3: 8}, nodeDictIn)
 
     def test_all_out_edges_of_node(self):
         print("\nTest all_out_edges_of_node")
@@ -60,11 +59,11 @@ class TestDiGraph(unittest.TestCase):
         nodeDictOut = g.all_out_edges_of_node(1)
         self.assertDictEqual({}, nodeDictOut)
         g.add_edge(1, 0, 8)
-        self.assertDictEqual({g.nodeDict[0]: 8}, nodeDictOut)
+        self.assertDictEqual({0: 8}, nodeDictOut)
         g.add_edge(1, 2, 8)
         g.add_edge(1, 3, 8)
         self.assertDictEqual(
-            {g.nodeDict[0]: 8, g.nodeDict[2]: 8, g.nodeDict[3]: 8}, nodeDictOut)
+            {0: 8, 2: 8, 3: 8}, nodeDictOut)
 
 
     def test_get_mc(self):
@@ -79,7 +78,7 @@ class TestDiGraph(unittest.TestCase):
         self.assertEqual(self.graph.get_mc(), 5)
         self.graph.add_node(4)
         self.assertEqual(self.graph.get_mc(), 6)
-        pass
+        
 
     def test_add_edge(self):
         print("\nTest add_edge")
