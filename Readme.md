@@ -14,7 +14,7 @@ Graph design gives Graph theory students a new way to study and understand inter
 ***
 >this is the core class of Graph design. it contains multiple algorithms based on well known Graph theory algorithms like Dijkstra DFS and many more, the main method of this class is to disassemble those algorithms to smaller function in way they can use each other's information and sync with each other, what make Graph Design better quicker and simpler. the whole class outputs is based on the same results format so each function can help multiple answers for different user requests. the main algorithms are:
 
-### get_graph:
+### getGraph:
 >This function returns the graph object that was created in the builder, this type object DiGraph
 
 ### Dijakstra: 
@@ -38,7 +38,7 @@ Graph design gives Graph theory students a new way to study and understand inter
 
 >In this function we will use a Dijakstra algorithm that finds all the paths from the resulting vertex.
 
-### load_from_json:
+### loadFromJson:
 >This function expects to get a path to a file type *.json and using this file creates a new graph of type DiGraph
 * Example json file
 ```json
@@ -88,30 +88,32 @@ Graph design gives Graph theory students a new way to study and understand inter
 
 ```
 
-### save_to_json:
+### saveToJson:
 >This function expects to get a file name and will be used to create a json file representing the graph as an example above.
 
-### plot_graph:
+### PlotGraph:
 > This function produces a graphical interface for displaying the graph, this function uses a library *matplotlib*
+
 ![not found](/image/plotGraph01.png)
 ***
 ## Graph
 ***
-### v_size e_size
-### get_all_v
-### all_in_edges_of_node
-### all_out_edges_of_node
-### get_mc
-### add_edge
+### vSize:
+### eSize:
+### getAllv:
+### all in edges of node:
+### all out edges of node:
+### getMc
+### addEdge
 
     
-### add_node
+### addNode
 
 
-### remove_node
+### removeNode
       
 
-### remove_edge
+### removeEdge
     
    
   
