@@ -1,5 +1,4 @@
 from Departments.Nodes import Vertex as Node
-from typing import DefaultDict, OrderedDict
 
 
 class DiGraph(object):

@@ -13,8 +13,9 @@ Graph design gives Graph theory students a new way to study and understand inter
 ## Algo:
 ***
 >this is the core class of Graph design. it contains multiple algorithms based on well known Graph theory algorithms like Dijkstra DFS and many more, the main method of this class is to disassemble those algorithms to smaller function in way they can use each other's information and sync with each other, what make Graph Design better quicker and simpler. the whole class outputs is based on the same results format so each function can help multiple answers for different user requests. the main algorithms are:
-### get_graph:
 
+### get_graph:
+>This function returns the graph object that was created in the builder, this type object DiGraph
 
 ### Dijakstra: 
 > Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later. [4] [5] [6]
@@ -38,11 +39,60 @@ Graph design gives Graph theory students a new way to study and understand inter
 >In this function we will use a Dijakstra algorithm that finds all the paths from the resulting vertex.
 
 ### load_from_json:
+>This function expects to get a path to a file type *.json and using this file creates a new graph of type DiGraph
+* Example json file
+```json
+{
+"Edges": [
+    {
+        "src": 0,
+        "w": 1.0,
+        "dest": 1
+    },
+    {
+        "src": 1,
+        "w": 1.1,
+        "dest": 0
+    },
+    {
+        "src": 1,
+        "w": 1.3,
+        "dest": 2
+    },
+    {
+        "src": 1,
+        "w": 1.8,
+        "dest": 3
+    },
+    {
+        "src": 2,
+        "w": 1.1,
+        "dest": 3
+    }
+],
+"Nodes": [
+    {
+        "id": 0
+    },
+    {
+        "id": 1
+    },
+    {
+        "id": 2
+    },
+    {
+        "id": 3
+    }
+]
+}
+
+```
 
 ### save_to_json:
+>This function expects to get a file name and will be used to create a json file representing the graph as an example above.
 
 ### plot_graph:
-
+> This function produces a graphical interface for displaying the graph, this function uses a library *matplotlib*
 ***
 ## Graph
 ***
