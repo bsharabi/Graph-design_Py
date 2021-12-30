@@ -186,7 +186,7 @@ $ Run "py ./main.py"
 $ Run "python3 ./main.py"
 ```
 ***
-# Performence
+# Performence (Windows 11 Pro, i9HK, 32RAM, RTX2080)
 ***
 ## Java 
 ### [0-10] Nodes:
@@ -232,6 +232,8 @@ $ Run "python3 ./main.py"
 * ShortestPath: 2637 milliseconds
 
 ![not](image/graph.jpg)
+
+
 
 
 
