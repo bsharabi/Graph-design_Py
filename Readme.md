@@ -139,10 +139,10 @@
 ### set_visited
 > a setter fot the "visited" field in the Node obj whice used by the dijkstra algorithem in Algo.py.
 
-### ___gt___ 
+### *___gt___* 
 > this function serves as a comperator between two differents nodes.similarly to the previous function this methhod helps the dirjksta algorithem in Algo.py.
 
-### ___repr___
+### *___repr___*
 > this function wiil print the Node date sorted  by a list of Out edges and In Edges. (ToString/print).
 
 ***
