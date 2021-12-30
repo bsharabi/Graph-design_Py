@@ -221,7 +221,6 @@ $ Run "python3 ./main.py"
 * TSP: 12 milliseconds
 * ShortestPath: 8 milliseconds
 
-
 ### [100-1000] Nodes:
 * center: 3348 milliseconds
 * TSP: 3407 milliseconds
@@ -231,6 +230,8 @@ $ Run "python3 ./main.py"
 * center: 20839 milliseconds
 * TSP: 25876 milliseconds
 * ShortestPath: 2637 milliseconds
+
+![not](image/graph.jpg)
 
 
 
