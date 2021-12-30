@@ -172,6 +172,7 @@
 >We will then get another vertex and perform the test again, which means that now the function will return true if the entered vertex increased the number of vertices in the graph
 
 # UML:
+![alt](UML.puml)
 
 ## How to run:
 ```bash
