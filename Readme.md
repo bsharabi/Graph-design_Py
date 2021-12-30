@@ -152,8 +152,8 @@
 * TestDiGraph
  >In testing this unit we would like to check if each of the functions in the above class is indeed working as expected
  
- Example:
- >```py
+* Example:
+ ```py
     def __init__(self, methodName: str = ...) -> None:
         super().__init__(methodName=methodName)
         self.graph = DiGraph()
