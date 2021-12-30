@@ -188,37 +188,49 @@ $ Run "python3 ./main.py"
 ***
 # Performence
 ***
-
+## Java 
 ### [0-10] Nodes:
 * center: 2 milliseconds	
-* TSP:
-* ShortestPath: 4 milliseconds
+* TSP: 3 milliseconds
+* ShortestPath: 1 milliseconds
 
 ### [10-100] Nodes:
 * center: 15 milliseconds
-* TSP:
+* TSP: 17 milliseconds
 * ShortestPath: 6 milliseconds
 
 
 ### [100-1000] Nodes:
 * center: 2228 milliseconds
-* TSP:
+* TSP: 2467 milliseconds
 * ShortestPath: 120 milliseconds
   
 ### [1000-10000] Nodes:
 * center: 19536 milliseconds
-* TSP:
+* TSP: 17946 milliseconds
 * ShortestPath: 2051 milliseconds
 
-### [10000-100000] Nodes:
-* center:
-* TSP:
-* ShortestPath:
+## Python 
+### [0-10] Nodes:
+* center: 3 milliseconds	
+* TSP: 2 milliseconds
+* ShortestPath: 2 milliseconds
 
-### [100000-1000000] Nodes:
-* center:
-* TSP:
-* ShortestPath:
+### [10-100] Nodes:
+* center: 20 milliseconds
+* TSP: 12 milliseconds
+* ShortestPath: 8 milliseconds
+
+
+### [100-1000] Nodes:
+* center: 3348 milliseconds
+* TSP: 3407 milliseconds
+* ShortestPath: 230 milliseconds
+  
+### [1000-10000] Nodes:
+* center: 20839 milliseconds
+* TSP: 25876 milliseconds
+* ShortestPath: 2637 milliseconds
 
 
 
